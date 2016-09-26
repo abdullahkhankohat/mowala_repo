@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -28,8 +29,12 @@ dependencies {
     compile 'com.google.android.gms:play-services:9.0.0'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
-    compile 'com.github.nirhart:parallaxscroll:1.0'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
-    compile 'com.github.clans:fab:1.6.4'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'commons-lang:commons-lang:2.6'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.intuit.sdp:sdp-android:1.0.3'
+
 }
