@@ -8,17 +8,16 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.LOCATION_HARDWARE"/>
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
-        android:allowBackup="true"
         android:name=".utils.AppClass"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
@@ -33,33 +32,34 @@
             </intent-filter>
         </activity>
 
+        <!-- Broadcast receivers -->
 
 
+        <!-- Admin access -->
+        <receiver
+            android:name=".reciever.MyAdminReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/xml" />
 
-<!-- Broadcast receivers -->
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
 
-    <!--Admin access-->
-    <receiver
-        android:name=".reciever.MyAdminReceiver"
-        android:permission="android.permission.BIND_DEVICE_ADMIN">
-        <meta-data
-            android:name="android.app.device_admin"
-            android:resource="@xml/xml" />
-        <intent-filter>
-            <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
-        </intent-filter>
+        <!-- Incoming SMS -->
+        <receiver
+            android:name=".reciever.IncomingSms"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="1000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
 
-    </receiver>
-
-    <!--Incoming SMS-->
-    <receiver android:name=".reciever.IncomingSms"
-        android:permission="android.permission.BROADCAST_SMS">
-        <intent-filter android:priority="1000">
-            <action android:name="android.provider.Telephony.SMS_RECEIVED" />
-        </intent-filter>
-    </receiver>
-
+        <activity android:name=".screens.RingPhoneSettingsScreen" />
+        <activity android:name=".screens.GetLocationSettings" />
+        <activity android:name=".screens.TheftSecurity"></activity>
     </application>
-
 
 </manifest>

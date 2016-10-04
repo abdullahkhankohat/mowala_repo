@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">FLP</string>
     <string name="title_activity_home_screen">Map</string>
+    <string name="ring_when_lost">Enable ring</string>
+    <string name="vibrate_when_lost">Enable vibration</string>
+    <string name="ring_code">FLP-ring</string>
+    <string name="locationsettings_heading">By enabling the following features, you can remotely get phone location by sending below command via sms from any other phone</string>
+    <string name="antitheftsettings_title">By enabling the following features, you can get phone loaction, IMEI number and lock phone with following security code when phone is stolen and SIM is changed</string>
 </resources>
