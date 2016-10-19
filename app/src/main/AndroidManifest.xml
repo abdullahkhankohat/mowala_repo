@@ -7,7 +7,9 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
@@ -25,11 +27,6 @@
         <activity
             android:name=".screens.HomeScreen"
             android:label="@string/title_activity_home_screen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- Broadcast receivers -->
@@ -59,7 +56,30 @@
 
         <activity android:name=".screens.RingPhoneSettingsScreen" />
         <activity android:name=".screens.GetLocationSettings" />
-        <activity android:name=".screens.TheftSecurity"></activity>
+        <activity android:name=".screens.TheftSecurity" />
+        <activity android:name=".screens.SearchPlace"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".screens.PlacesMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".screens.TrackingScreen"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+
+        <activity android:name=".screens.SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <service
+            android:name=".services.LocationService"
+            android:enabled="true" />
     </application>
 
 </manifest>

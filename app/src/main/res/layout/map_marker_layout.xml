@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:src="@mipmap/mapmarker" />
+
+    <TextView
+        android:id="@+id/num_txt"
+        android:layout_width="@dimen/_34sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center"
+        android:fitsSystemWindows="true"
+        android:textSize="@dimen/_20sdp"
+        android:text=""
+        android:singleLine="true"
+        android:textColor="#9438b3"
+        android:textStyle="bold" />
+
+</RelativeLayout>

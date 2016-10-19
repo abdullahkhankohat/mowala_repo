@@ -2,11 +2,16 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-
-
+    <color name="colorAccent">#9233e1</color>
+    <color name="map_circle_boder">#9233e1</color>
+    <color name="map_circle_bg">#6c3393e1</color>
+    <color name="transparent">#003393e1</color>
     <color name="white">#ffffff</color>
     <color name="black">#000</color>
+    <color name="black_tr">#94000000</color>
+    <color name="country.heading.fill">#E8E8E8</color>
+    <color name="divider">#cecece</color>
+    <color name="black_transparent">#ffd503</color>
 
 
 </resources>

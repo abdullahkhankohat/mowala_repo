@@ -6,70 +6,104 @@
     android:layout_height="match_parent"
     tools:context="flp.oursols.com.flp.screens.HomeScreen" >
 
-
-
-
-
     <fragment
          android:layout_width="match_parent"
          android:id="@+id/map"
+        android:layout_above="@+id/buttons_lay"
          android:name="com.google.android.gms.maps.SupportMapFragment"
          android:layout_height="match_parent"
          tools:layout_editor_absoluteY="0dp"
          tools:layout_editor_absoluteX="0dp" />
 
 
-    <RelativeLayout
-        android:background="#af000000"
+    <LinearLayout
+        android:id="@+id/buttons_lay"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_200sdp">
+        android:background="@drawable/bg_map"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="@dimen/_100sdp">
 
 
         <LinearLayout
-            android:padding="30dp"
-            android:weightSum="6"
+            android:padding="10dp"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+
+
+            <LinearLayout
+                android:background="@drawable/button_selector"
+                android:padding="@dimen/_14sdp"
+                android:onClick="onClick"
+                android:id="@+id/b1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
             <ImageButton
-                android:background="#0000"
-                android:layout_weight="2"
-                android:src="@drawable/ic_map"
+                android:background="#00000000"
+                android:src="@drawable/ic_navigation"
                 android:id="@+id/btn1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:clickable="false"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp" />
 
-            <ImageButton
-                android:background="#0000"
-                android:layout_weight="2"
-                android:src="@drawable/ic_sdcard"
-                android:id="@+id/btn2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            </LinearLayout>
 
-            <ImageButton
-                android:background="#0000"
-                android:layout_weight="2"
-                android:src="@drawable/ic_sim"
-                android:id="@+id/btn3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:background="@drawable/button_selector"
+                    android:padding="@dimen/_14sdp"
+                    android:onClick="onClick"
+                    android:id="@+id/placesBtn"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:background="#0000"
+                        android:src="@drawable/ic_places"
+                        android:id="@+id/btn2"
+                        android:clickable="false"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@drawable/button_selector"
+                    android:padding="@dimen/_14sdp"
+                    android:onClick="onClick"
+                    android:id="@+id/settingsBtn"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:background="#0000"
+                        android:clickable="false"
+                        android:src="@drawable/ic_setting_light"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp" />
+
+                </LinearLayout>
+
+
 
         </LinearLayout>
 
 
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
     <LinearLayout
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
         <include layout="@layout/fab_layout" />
+
     </LinearLayout>
 
 
